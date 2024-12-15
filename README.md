@@ -40,6 +40,13 @@ LD_PRELOAD=./libfailfork.so ./your_program
 LD_PRELOAD=./libfailpthread.so ./your_program
 LD_PRELOAD=./libfailpipe.so ./your_program
 ```
+
+If you want to test it with `valgrind`:
+``` bash
+LD_PRELOAD=./libfailfunction.so valgrind ./your_program
+LD_PRELOAD=./libfail_malloc.so valgrind ./your_program
+```
+
 ### 4.  Test Failure Scenarios
 
 `fork`: Fails every other call.  
